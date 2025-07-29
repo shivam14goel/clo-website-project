@@ -1,13 +1,14 @@
-🧥 Clo Fashion Website App
+# 🧥 Clo Fashion Website App
 A React-based frontend app that fetches and displays clothing content using filtering, keyword search, infinite scroll, and responsive layout — all without using browser storage for state persistence.
+
 <img width="1879" height="886" alt="image" src="https://github.com/user-attachments/assets/59086ac1-47c7-4de2-b074-16b6cf16b0de" />
 
 
-🚀 Live Preview
+# 🚀 Live Preview
 Host this on Vercel / Netlify or run locally to view.
 
-📦 Features Implemented
-✅ Content Fetching
+# 📦 Features Implemented
+### ✅ Content Fetching
 Pulls data from:
 https://closet-recruiting-api.azurewebsites.net/api/data
 
@@ -21,7 +22,7 @@ Title
 
 Pricing option (Free / View Only / Paid with price)
 
-✅ Pricing Filter
+### ✅ Pricing Filter
 Supports 3 filter options:
 
 Paid
@@ -36,7 +37,7 @@ Default: All unchecked (shows everything)
 
 Reset button clears all selections
 
-✅ Keyword Search
+### ✅ Keyword Search
 Matches title or creator name
 
 Supports multi-word input (e.g., adam yellow)
@@ -45,7 +46,7 @@ Case-insensitive
 
 Combined with filters
 
-✅ Responsive Grid Layout
+### ✅ Responsive Grid Layout
 Adapts based on screen size:
 
 ≥1200px: 4 columns
@@ -56,12 +57,12 @@ Adapts based on screen size:
 
 <480px: 1 column
 
-✅ Infinite Scroll
+### ✅ Infinite Scroll
 Loads 12 items at a time
 
 Loads more as you scroll near bottom
 
-✅ Search + Filters Persist on Reload
+### ✅ Search + Filters Persist on Reload
 
 No browser storage (no localStorage, no cookies)
 
@@ -69,7 +70,7 @@ Uses URL query parameters:
 ?q=yellow+coat&paid=true&free=false&viewOnly=true
 
 
-🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 Category	        Tech
 Framework	        React
@@ -80,7 +81,7 @@ State	            useState / useEffect
 URL Handling	    window.history, URLSearchParams
 
 
-📁 Folder Structure
+# 📁 Folder Structure
 
 📦 src
 ├── components
@@ -108,11 +109,11 @@ npm install
 npm start
 
 
-🔮 Potential Enhancements
+# 🔮 Potential Enhancements
 
 Here’s what else can be added to improve the app:
 
-💡 Feature Ideas
+## 💡 Feature Ideas
 Pagination Toggle: Let users switch between infinite scroll & manual pagination.
 
 Sorting Options: Sort by title, price, or creator name.
@@ -131,5 +132,5 @@ Accessibility Improvements (ARIA roles, focus states)
 
 Unit/Integration Testing (e.g., React Testing Library + Jest)
 
-🧑‍💻 Author
+# 🧑‍💻 Author
 SHivam Goel.
