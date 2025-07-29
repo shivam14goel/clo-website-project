@@ -1,5 +1,7 @@
 🧥 Clo Fashion Website App
 A React-based frontend app that fetches and displays clothing content using filtering, keyword search, infinite scroll, and responsive layout — all without using browser storage for state persistence.
+<img width="1879" height="886" alt="image" src="https://github.com/user-attachments/assets/59086ac1-47c7-4de2-b074-16b6cf16b0de" />
+
 
 🚀 Live Preview
 Host this on Vercel / Netlify or run locally to view.
