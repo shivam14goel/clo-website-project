@@ -1,0 +1,17 @@
+.content-card {
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 8px;
+  color: #fff;
+  text-align: center;
+}
+
+.content-image {
+  width: 100%;
+  height: auto;
+}
+
+.content-info {
+  margin-top: 8px;
+}

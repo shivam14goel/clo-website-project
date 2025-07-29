@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+🧥 Clo Fashion Website App
+A React-based frontend app that fetches and displays clothing content using filtering, keyword search, infinite scroll, and responsive layout — all without using browser storage for state persistence.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 Live Preview
+Host this on Vercel / Netlify or run locally to view.
 
-## Available Scripts
+📦 Features Implemented
+✅ Content Fetching
+Pulls data from:
+https://closet-recruiting-api.azurewebsites.net/api/data
 
-In the project directory, you can run:
+Renders each content item with:
 
-### `npm start`
+Image
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Creator name
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Title
 
-### `npm test`
+Pricing option (Free / View Only / Paid with price)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+✅ Pricing Filter
+Supports 3 filter options:
 
-### `npm run build`
+Paid
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Free
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+View Only
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Multiple selections allowed
 
-### `npm run eject`
+Default: All unchecked (shows everything)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Reset button clears all selections
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+✅ Keyword Search
+Matches title or creator name
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Supports multi-word input (e.g., adam yellow)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Case-insensitive
 
-## Learn More
+Combined with filters
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+✅ Responsive Grid Layout
+Adapts based on screen size:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+≥1200px: 4 columns
 
-### Code Splitting
+<1200px: 3 columns
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<768px: 2 columns
 
-### Analyzing the Bundle Size
+<480px: 1 column
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+✅ Infinite Scroll
+Loads 12 items at a time
 
-### Making a Progressive Web App
+Loads more as you scroll near bottom
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+✅ Search + Filters Persist on Reload
 
-### Advanced Configuration
+No browser storage (no localStorage, no cookies)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Uses URL query parameters:
+?q=yellow+coat&paid=true&free=false&viewOnly=true
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+🛠️ Tech Stack
 
-### `npm run build` fails to minify
+Category	        Tech
+Framework	        React
+Styling	            CSS Modules
+Infinite Scroll	    Custom Hook (useEffect)
+API Data	        REST
+State	            useState / useEffect
+URL Handling	    window.history, URLSearchParams
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+📁 Folder Structure
+
+📦 src
+├── components
+│   ├── ContentCard.jsx
+│   ├── FilterPanel.jsx
+│   ├── SearchBar.jsx
+├── hooks
+│   └── useInfiniteScroll.js
+├── App.jsx
+├── App.css
+
+
+🧪 Setup Instructions
+
+# 1. Clone the repo
+git clone https://github.com/shivam14goel/clo-website-project.git
+
+# 2. Navigate to project
+cd closet-browser
+
+# 3. Install dependencies
+npm install
+
+# 4. Run the dev server
+npm start
+
+
+🔮 Potential Enhancements
+
+Here’s what else can be added to improve the app:
+
+💡 Feature Ideas
+Pagination Toggle: Let users switch between infinite scroll & manual pagination.
+
+Sorting Options: Sort by title, price, or creator name.
+
+Filter by Price Range: Add sliders for filtering paid items by cost.
+
+Favorites / Save Items: Allow users to mark items they like.
+
+Dark/Light Mode Toggle
+
+Debounced Search: Improve performance on large data sets.
+
+Loading Skeletons: Better user feedback while data is loading.
+
+Accessibility Improvements (ARIA roles, focus states)
+
+Unit/Integration Testing (e.g., React Testing Library + Jest)
+
+🧑‍💻 Author
+SHivam Goel.

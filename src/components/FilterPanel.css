@@ -1,0 +1,11 @@
+.filter-panel {
+  margin-bottom: 16px;
+  background: #1e1e1e;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.checkbox-group label {
+  margin-right: 12px;
+  color: #ccc;
+}
